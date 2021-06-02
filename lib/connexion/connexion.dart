@@ -137,7 +137,7 @@ class _ConnexionState extends State<Connexion> {
                                 return 'Votre Mot de passe est incorrect !';
                               }
                             },
-                            obscureText: false,
+                            obscureText: true,
                             maxLines: 1,
                             controller: _password,
                             keyboardType: TextInputType.text,
@@ -162,7 +162,6 @@ class _ConnexionState extends State<Connexion> {
                             Map<String,
                                 dynamic>> maps = await db.rawQuery(
                             "SELECT * FROM user WHERE username = '${_username.text}' AND password = '${_password.text}' ");
-                        print(maps.toString());
                         if (maps.isNotEmpty) {
                           Navigator.pushAndRemoveUntil(
                             context,

@@ -30,7 +30,6 @@ class _DosemedicState extends State<Dosemedic> {
 
     switch (regle['billantype']) {
       case "clairance_renale":
-        print(bilanreglage(bilan['clairance']));
         bilantype = bilanreglage(bilan['clairance']);
         break;
       case "bilirubine":
