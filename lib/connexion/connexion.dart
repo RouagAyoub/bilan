@@ -1,3 +1,4 @@
+import 'package:bilanmedic/interfaces/pagecollecteur.dart';
 import 'package:bilanmedic/main.dart';
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqlite_api.dart';
@@ -31,7 +32,7 @@ class _ConnexionState extends State<Connexion> {
                       top: 25.0,
                     ),
                     child: Text(
-                      "S 'identifier",
+                      "Bonjour docteur",
                       style: TextStyle(
                         fontSize: 25.0,
                         fontWeight: FontWeight.w700,
@@ -82,9 +83,7 @@ class _ConnexionState extends State<Connexion> {
                             ),
                             // ignore: missing_return
                             validator: (value) {
-                              if (value.length < 2) {
-                                return "Votre Nom d'utilisateur est incorrect !";
-                              }
+                              if (value.length < 2) {}
                             },
                             obscureText: false,
                             maxLines: 1,
@@ -132,11 +131,7 @@ class _ConnexionState extends State<Connexion> {
                               ),
                             ),
                             // ignore: missing_return
-                            validator: (value) {
-                              if (value.length < 6) {
-                                return 'Votre Mot de passe est incorrect !';
-                              }
-                            },
+                            validator: (value) {},
                             obscureText: true,
                             maxLines: 1,
                             controller: _password,
@@ -163,10 +158,12 @@ class _ConnexionState extends State<Connexion> {
                                 dynamic>> maps = await db.rawQuery(
                             "SELECT * FROM user WHERE username = '${_username.text}' AND password = '${_password.text}' ");
                         if (maps.isNotEmpty) {
+                          setpref(true);
                           Navigator.pushAndRemoveUntil(
                             context,
-                            MaterialPageRoute(builder: (context) => null),
-                            (Route<dynamic> route) => true,
+                            MaterialPageRoute(
+                                builder: (context) => PageCollector()),
+                            (Route<dynamic> route) => false,
                           );
                         }
                       },

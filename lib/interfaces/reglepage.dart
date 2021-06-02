@@ -57,7 +57,7 @@ class _ReglePageState extends State<ReglePage> {
                         ),
                         borderRadius: BorderRadius.circular(20.0),
                       ),
-                      hintText: "Search..",
+                      hintText: "Recherche ",
                       suffixIcon: Icon(
                         Icons.search,
                         color: Colors.black,
@@ -81,8 +81,8 @@ class _ReglePageState extends State<ReglePage> {
             Padding(
               padding: const EdgeInsets.only(top: 90, left: 30, right: 30),
               child: FutureBuilder<List<Map>>(
+                //get medic tjib les medicament
                 future: getMedic(),
-                //initialData: ,
                 builder:
                     (BuildContext context, AsyncSnapshot<List<Map>> snapshot) {
                   switch (snapshot.connectionState) {
@@ -242,6 +242,7 @@ class _ReglePageState extends State<ReglePage> {
                                                                             ),
                                                                             Expanded(
                                                                                 child: TextFormField(
+                                                                              // ignore: missing_return
                                                                               validator: (value) {
                                                                                 if (value == "") {
                                                                                   return "la regle est vide !!";
@@ -256,6 +257,7 @@ class _ReglePageState extends State<ReglePage> {
                                                                         ),
                                                                         TextFormField(
                                                                           validator:
+                                                                              // ignore: missing_return
                                                                               (value) {
                                                                             if (value ==
                                                                                 "") {
@@ -697,11 +699,6 @@ Widget getreglewhere(idmedicament, context1) {
                                                         Expanded(
                                                             child:
                                                                 TextFormField(
-                                                          validator: (value) {
-                                                            if (value == "") {
-                                                              return "la regle est vide !!";
-                                                            }
-                                                          },
                                                           controller: regle,
                                                           decoration:
                                                               InputDecoration(
@@ -712,11 +709,6 @@ Widget getreglewhere(idmedicament, context1) {
                                                       ],
                                                     ),
                                                     TextFormField(
-                                                      validator: (value) {
-                                                        if (value == "") {
-                                                          return "la dose est vide !!";
-                                                        }
-                                                      },
                                                       controller: dose,
                                                       decoration:
                                                           InputDecoration(
