@@ -1,10 +1,9 @@
+import 'package:bilanmedic/interfaces/pagecollecteur.dart';
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite/sqlite_api.dart';
 import 'dart:async';
 import 'package:path/path.dart';
-
-import 'connexion/connexion.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,7 +30,7 @@ class _MyAppState extends State<MyApp> {
         accentColor: Color(0xFFAEB365),
         primaryColor: Color(0xFF00728F),
       ),
-      home: Connexion(),
+      home: PageCollector(),
     );
   }
 }

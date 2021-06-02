@@ -72,8 +72,8 @@ class _ConnexionState extends State<Connexion> {
                               ),
                               hintText: "Nom d'utilisateur",
                               prefixIcon: Icon(
-                                Icons.phone,
-                                color: Colors.black,
+                                Icons.person,
+                                color: Colors.red,
                               ),
                               hintStyle: TextStyle(
                                 fontSize: 15.0,
@@ -123,8 +123,8 @@ class _ConnexionState extends State<Connexion> {
                               ),
                               hintText: "Mot de passe ",
                               prefixIcon: Icon(
-                                Icons.phone,
-                                color: Colors.black,
+                                Icons.lock,
+                                color: Colors.red,
                               ),
                               hintStyle: TextStyle(
                                 fontSize: 15.0,

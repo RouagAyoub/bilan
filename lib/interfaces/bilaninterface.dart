@@ -39,7 +39,7 @@ class _BilanInterfaceState extends State<BilanInterface> {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        title: Text('Medicament et Regle'),
+        title: Text('Bilan'),
         actions: [
           IconButton(
               icon: Icon(Icons.add_box_rounded),
@@ -233,36 +233,49 @@ class _BilanInterfaceState extends State<BilanInterface> {
                                   Card(
                                     child: Row(
                                       children: [
-                                        Container(
-                                          padding: EdgeInsets.only(left: 5),
-                                          child: Text(
-                                            "Clairance rénale",
-                                            style: TextStyle(
-                                                color: Colors.black87),
-                                          ),
-                                        ),
                                         Expanded(
-                                          child: Icon(
-                                            Icons.view_stream_rounded,
-                                            size: 15,
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: EdgeInsets.only(
-                                              right: 10,
-                                              left: 10,
-                                              bottom: 7,
-                                              top: 7),
-                                          padding: EdgeInsets.all(7),
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(5),
-                                            color: Colors.green[500],
-                                          ),
-                                          child: Text(
-                                            snapshot.data[index]['clairance'],
-                                            style: TextStyle(
-                                                color: Colors.black87),
+                                          child: Column(
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Text("type de Bilan  : "),
+                                                  Container(
+                                                    padding: EdgeInsets.only(
+                                                        left: 5),
+                                                    child: Text(
+                                                      "Clairance rénale",
+                                                      style: TextStyle(
+                                                          color:
+                                                              Colors.black87),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Text("resultat de bilan :"),
+                                                  Container(
+                                                    margin: EdgeInsets.only(
+                                                        right: 10,
+                                                        left: 10,
+                                                        bottom: 7,
+                                                        top: 7),
+                                                    padding: EdgeInsets.all(7),
+                                                    decoration: BoxDecoration(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              5),
+                                                    ),
+                                                    child: Text(
+                                                      snapshot.data[index]
+                                                          ['clairance'],
+                                                      style: TextStyle(
+                                                          color: Colors.black),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
                                           ),
                                         ),
                                         IconButton(
@@ -320,36 +333,49 @@ class _BilanInterfaceState extends State<BilanInterface> {
                                   Card(
                                     child: Row(
                                       children: [
-                                        Container(
-                                          padding: EdgeInsets.only(left: 5),
-                                          child: Text(
-                                            " la bilirubine",
-                                            style: TextStyle(
-                                                color: Colors.black87),
-                                          ),
-                                        ),
                                         Expanded(
-                                          child: Icon(
-                                            Icons.view_stream_rounded,
-                                            size: 15,
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: EdgeInsets.only(
-                                              right: 10,
-                                              left: 10,
-                                              bottom: 7,
-                                              top: 7),
-                                          padding: EdgeInsets.all(7),
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(5),
-                                            color: Colors.green[500],
-                                          ),
-                                          child: Text(
-                                            snapshot.data[index]['bilirubine'],
-                                            style: TextStyle(
-                                                color: Colors.black87),
+                                          child: Column(
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Text("type de Bilan  : "),
+                                                  Container(
+                                                    padding: EdgeInsets.only(
+                                                        left: 5),
+                                                    child: Text(
+                                                      " la bilirubine",
+                                                      style: TextStyle(
+                                                          color: Colors.black),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Text("resultat de Bilan  : "),
+                                                  Container(
+                                                    margin: EdgeInsets.only(
+                                                        right: 10,
+                                                        left: 10,
+                                                        bottom: 7,
+                                                        top: 7),
+                                                    padding: EdgeInsets.all(7),
+                                                    decoration: BoxDecoration(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              5),
+                                                    ),
+                                                    child: Text(
+                                                      snapshot.data[index]
+                                                          ['bilirubine'],
+                                                      style: TextStyle(
+                                                          color:
+                                                              Colors.black87),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
                                           ),
                                         ),
                                         IconButton(
@@ -407,36 +433,49 @@ class _BilanInterfaceState extends State<BilanInterface> {
                                   Card(
                                     child: Row(
                                       children: [
-                                        Container(
-                                          padding: EdgeInsets.only(left: 5),
-                                          child: Text(
-                                            " la tgo/tgp",
-                                            style: TextStyle(
-                                                color: Colors.black87),
-                                          ),
-                                        ),
                                         Expanded(
-                                          child: Icon(
-                                            Icons.view_stream_rounded,
-                                            size: 15,
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: EdgeInsets.only(
-                                              right: 10,
-                                              left: 10,
-                                              bottom: 7,
-                                              top: 7),
-                                          padding: EdgeInsets.all(7),
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(5),
-                                            color: Colors.green[500],
-                                          ),
-                                          child: Text(
-                                            snapshot.data[index]['tgo'],
-                                            style: TextStyle(
-                                                color: Colors.black87),
+                                          child: Column(
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Text("type de Bilan  : "),
+                                                  Container(
+                                                    padding: EdgeInsets.only(
+                                                        left: 5),
+                                                    child: Text(
+                                                      " la tgo/tgp",
+                                                      style: TextStyle(
+                                                          color:
+                                                              Colors.black87),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Text("resultat de Bilan  : "),
+                                                  Container(
+                                                    margin: EdgeInsets.only(
+                                                        right: 10,
+                                                        left: 10,
+                                                        bottom: 7,
+                                                        top: 7),
+                                                    padding: EdgeInsets.all(7),
+                                                    decoration: BoxDecoration(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              5),
+                                                    ),
+                                                    child: Text(
+                                                      snapshot.data[index]
+                                                          ['tgo'],
+                                                      style: TextStyle(
+                                                          color: Colors.black),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
                                           ),
                                         ),
                                         IconButton(
