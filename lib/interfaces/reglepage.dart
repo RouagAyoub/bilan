@@ -2,6 +2,7 @@ import 'package:confirm_dialog/confirm_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqlite_api.dart';
 
+import '../connexion/connexion.dart';
 import '../main.dart';
 
 class ReglePage extends StatefulWidget {
@@ -437,6 +438,16 @@ class _ReglePageState extends State<ReglePage> {
         ),
       ),
       appBar: AppBar(
+        leading: IconButton(
+            icon: Icon(Icons.logout),
+            onPressed: () async {
+              await setpref(false);
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (context) => Connexion()),
+                (Route<dynamic> route) => false,
+              );
+            }),
         title: Text('Medicament et Regle'),
         actions: [
           IconButton(
